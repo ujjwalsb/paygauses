@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="first-row">
+    <img class="image" src="/static/full-img.jpg" alt="Paris"/>
+    <div class="container">
+      <form id="contact" action="/" method="GET">
+        {% csrf_token %}
+        <h4>Loan Enquiry Form</h4>
+        <fieldset>
+          <input placeholder="First name" type="text" tabindex="1" required autofocus name="firstName"/>
+        </fieldset> 
+        <fieldset>
+          <input placeholder="Last name" type="text" tabindex="2" name="lastName" required/>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Email Address" type="email" tabindex="2" name="email" required/>
+        </fieldset>
+        <fieldset>
+          <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" name="mobile" required/>
+        </fieldset>
+        <fieldset>
+          <input type="text" class="floating-input" id="loanAmount" name="loanAmount" required="" data-om-bind="loanAmount" placeholder="ex: ₹6,00,000" autocomplete="off">
+        </fieldset>
+        <fieldset>
+          <div class="select-wrapper">
+            <select class="plan-selection" name="loanNeedTime" required>
+              <option disabled="True" selected="True">How soon do you want the loan</option>
+              <option value="After 4 weeks">
+                After 4 weeks
+              </option>
+              <option value="After 2 weeks">
+                After 2 weeks
+              </option>
+              <option value="Immediate">
+                Immediate
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="select-wrapper">
+            <select class="plan-selection" name="revenue" required>
+              <option disabled="True" selected="True">Last 12 months sales</option>
+              <option value="0 - 3 Lacs">
+                0 - 3 Lacs
+              </option>
+              <option value="3 - 12 Lacs">
+                3 - 12 Lacs
+              </option>
+              <option value="12 - 30 Lacs">
+                12 - 30 Lacs
+              </option>
+              <option value="30 - 60 Lacs">
+                30 - 60 Lacs
+              </option>
+              <option value="60 Lacs - 1 Crore">
+                60 Lacs - 1 Crore
+              </option>
+              <option value="1 - 10 Crores">
+                1 - 10 Crores
+              </option>
+              <option value="More than 10 Crores">
+                More than 10 Crores
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="select-wrapper">
+            <select class="plan-selection" name="ageOfBusiness" required>
+              <option disabled="True" selected="True">How old is your Business</option>
+              <option value="Planning to start a Business">
+                Planning to start a Business
+              </option>
+              <option value="0 to 3 Months">
+                0 to 3 Months
+              </option>
+              <option value="3 to 6 Months">
+                3 to 6 Months
+              </option>
+              <option value="6 Months to 1 year">
+                6 Months to 1 year
+              </option>
+              <option value="1 to 5 years">
+                1 to 5 years
+              </option>
+              <option value="More than 5 years">
+                More than 5 years
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="select-wrapper">
+            <select class="plan-selection" name="registeredAs" required>
+              <option disabled="True" selected="True">Type of Business</option>
+              <option value="LLP">
+                LLP
+              </option>
+              <option value="Partnership">
+                Partnership
+              </option>
+              <option value="One Person Company">
+                One Person Company
+              </option>
+              <option value="Private Limited">
+                Private Limited
+              </option>
+              <option value="Limited Company">
+                Limited Company
+              </option>
+              <option value="Proprietorship">
+                Proprietorship
+              </option>
+              <option value="Not Registered">
+                Not Registered
+              </option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <input type="checkbox" name="eligibility" checked="True" value="eligibility"> I accept all the terms & conditions.
+        </fieldset>
+        <fieldset>
+          <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">
+            Submit
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="tag-line-section">
+      <h1 class="headline">Har vyapari ka humsafar!</h1>
+      <div class="sub-line">Trusted by 55,000+ businesses with 3500+ Crores loans sanctioned across 1300+ cities</div>
+        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" enableBackground="new 0 0 367.805 367.805" version="1.1" viewBox="0 0 367.805 367.805" xmlSpace="preserve">
+          <path fill="#3BB54A" d="M183.903.001c101.566 0 183.902 82.336 183.902 183.902s-82.336 183.902-183.902 183.902S.001 285.469.001 183.903C-.288 82.625 81.579.29 182.856.001h1.047z"></path>
+          <path fill="#D4E1F4" d="M285.78 133.225L155.168 263.837 82.025 191.217 111.805 161.96 155.168 204.801 256.001 103.968z"></path>
+        </svg>
+        <p>RBI Registered NBFC</p>
+      </div>
+    </div>
+
+{% endblock content %}
+
