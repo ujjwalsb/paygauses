@@ -85,7 +85,7 @@ DATABASES = {
         'NAME': 'payg040$paygasusmoney',
         'USER': 'payg040',
         'PASSWORD': 'paygasus789',
-        'HOST': 'catfiles.mysql.pythonanywhere-services.com',
+        'HOST': 'payg040.mysql.pythonanywhere-services.com',
     }
 }
 
