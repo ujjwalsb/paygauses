@@ -77,15 +77,15 @@ WSGI_APPLICATION = 'moneyLending.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': 'local_Paygauses_dev',
-        # 'USER': 'root',
-        # 'PASSWORD': 'QQWD7@@8gr4k',
-        # 'HOST': 'localhost',
+        'NAME': 'local_Paygauses_dev',
+        'USER': 'root',
+        'PASSWORD': 'usbx9rcp',
+        'HOST': 'localhost',
 
-        'NAME': 'payg040$paygasusmoney',
-        'USER': 'payg040',
-        'PASSWORD': 'paygasus789',
-        'HOST': 'payg040.mysql.pythonanywhere-services.com',
+        # 'NAME': 'payg040$paygasusmoney',
+        # 'USER': 'payg040',
+        # 'PASSWORD': 'paygasus789',
+        # 'HOST': 'payg040.mysql.pythonanywhere-services.com',
     }
 }
 
