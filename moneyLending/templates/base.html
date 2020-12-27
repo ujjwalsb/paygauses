@@ -1,4 +1,6 @@
 {% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +17,14 @@
         </a>
       </div>
     </header>
+    <div class="nav">
+      <ul>
+        <li><a href="{% url 'loanEnquiry' %}" class="nav-link"><em>Loan Enquiry</em></a></li>
+        <li><a href="{% url 'homeDesignEnquiry' %}"  class="nav-link">Home Design Enquiry</a></li>
+        <li><a href="{% url 'constructionEnquiry' %}" class="nav-link">Construction Enquiry</a></li>
+        <li><a href="{% url 'eventManagementEnquiry' %}" class="nav-link">Event Management Enquiry</a></li>
+      </ul>
+    </div>
   {% block content %}
   {% endblock content %}
   <section class="second-row">

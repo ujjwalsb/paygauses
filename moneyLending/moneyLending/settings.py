@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'local_Paygauses_dev',
-        'USER': 'root',
-        'PASSWORD': 'usbx9rcp',
+        'USER': 'localuser',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
 
         # 'NAME': 'payg040$paygasusmoney',
