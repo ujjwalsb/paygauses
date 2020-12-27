@@ -15,7 +15,7 @@ class LoanEnquiry(models.Model):
         return self.mobile
 
     class Meta:
-        verbose_name_plural = "Paygauses Information Management"
+        verbose_name_plural = "Loan Enquiry Management"
 
 
 class HomeDesignEnquiry(models.Model):
@@ -29,7 +29,7 @@ class HomeDesignEnquiry(models.Model):
         return self.mobile
 
     class Meta:
-        verbose_name_plural = "Paygauses Information Management"
+        verbose_name_plural = "Home Design Enquiry Management"
 
 
 class ConstructionEnquiry(models.Model):
@@ -37,17 +37,13 @@ class ConstructionEnquiry(models.Model):
     lastName = models.CharField(max_length=100, null=True, unique=False)
     email = models.CharField(max_length=100, null=True, unique=False)
     mobile = models.CharField(max_length=100, null=True, unique=False)
-    loanAmount = models.CharField(max_length=100, null=True, unique=False)
-    loanNeedTime = models.CharField(max_length=100, null=True, unique=False)
-    revenue = models.CharField(max_length=100, null=True, unique=False)
-    ageOfBusiness = models.CharField(max_length=100, null=True, unique=False)
-    registeredAs = models.CharField(max_length=100, null=True, unique=False)
+    construction_enquiry_service = models.CharField(max_length=100, null=True, unique=False)
 
     def __str__(self):
         return self.mobile
 
     class Meta:
-        verbose_name_plural = "Paygauses Information Management"
+        verbose_name_plural = "Construction Enquiry Management"
 
 
 class EventManagementEnquiry(models.Model):
@@ -65,7 +61,7 @@ class EventManagementEnquiry(models.Model):
         return self.mobile
 
     class Meta:
-        verbose_name_plural = "Paygauses Information Management"
+        verbose_name_plural = "Event Enquiry Management"
 
 
 class ProductOrServiceEnquiry(models.Model):
@@ -83,4 +79,4 @@ class ProductOrServiceEnquiry(models.Model):
         return self.mobile
 
     class Meta:
-        verbose_name_plural = "Paygauses Information Management"
+        verbose_name_plural = "Product or Service Enquiry Management"

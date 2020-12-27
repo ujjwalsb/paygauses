@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.views.decorators.http import require_GET, require_POST
 from .models import HomeDesignEnquiry
 from .models import LoanEnquiry
+from .models import ConstructionEnquiry
 
 
 def loanEnquiry(request):
@@ -29,8 +31,6 @@ def loanEnquiry(request):
         return render(request, 'thankyou.html', {})
     return render(request, 'loanEnquiry.html', {})
 
-def homeDesignEnquiry(request):
-    return render()
 
 def homeDesignEnquiry(request):
     firstName = request.GET.get("firstName")
@@ -57,23 +57,15 @@ def constructionEnquiry(request):
     lastName = request.GET.get("lastName")
     email = request.GET.get("email")
     mobile = request.GET.get("mobile")
-    loanAmount = request.GET.get("loanAmount")
-    loanNeedTime = request.GET.get("loanNeedTime")
-    revenue = request.GET.get("revenue")
-    ageOfBusiness = request.GET.get("ageOfBusiness")
-    registeredAs = request.GET.get("registeredAs")
+    construction_enquiry_service = request.GET.get("construction_enquiry_service")
 
     if firstName:
-        enquiry = paygausesEnquiry.objects.create(
+        enquiry = ConstructionEnquiry.objects.create(
             firstName=firstName,
             lastName=lastName,
             email=email,
             mobile=mobile,
-            loanAmount=loanAmount,
-            loanNeedTime=loanNeedTime,
-            revenue=revenue,
-            ageOfBusiness=ageOfBusiness,
-            registeredAs=registeredAs,
+            construction_enquiry_service=construction_enquiry_service
         )
 
         return render(request, 'thankyou.html', {})
