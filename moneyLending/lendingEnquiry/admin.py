@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import paygausesEnquiry
+from .models import LoanEnquiry
 
 class PayModelAdmin(admin.ModelAdmin):
     list_display = ["firstName", "email", "mobile", "loanAmount", "loanNeedTime"]
@@ -9,7 +9,7 @@ class PayModelAdmin(admin.ModelAdmin):
     search_fields = ["firstName", "lastName", "email", "mobile"]
 
     class Meta:
-        model = paygausesEnquiry
+        model = LoanEnquiry
 
 
-admin.site.register(paygausesEnquiry, PayModelAdmin)
+admin.site.register(LoanEnquiry, PayModelAdmin)
