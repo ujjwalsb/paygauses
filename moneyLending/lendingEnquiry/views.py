@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import HomeDesignEnquiry
+from .models import LoanEnquiry
 
 
 def loanEnquiry(request):
@@ -14,7 +15,7 @@ def loanEnquiry(request):
     registeredAs = request.GET.get("registeredAs")
 
     if firstName:
-        enquiry = loanEnquiry.objects.create(
+        enquiry = LoanEnquiry.objects.create(
             firstName=firstName,
             lastName=lastName,
             email=email,
