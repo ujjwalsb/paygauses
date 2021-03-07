@@ -45,6 +45,19 @@ class ConstructionEnquiry(models.Model):
     class Meta:
         verbose_name_plural = "Construction Enquiry Management"
 
+class ServicesAt99Enquiry(models.Model):
+    firstName = models.CharField(max_length=100, null=True, unique=False)
+    lastName = models.CharField(max_length=100, null=True, unique=False)
+    email = models.CharField(max_length=100, null=True, unique=False)
+    mobile = models.CharField(max_length=100, null=True, unique=False)
+    servicesAt99_enquiry_service = models.CharField(max_length=100, null=True, unique=False)
+
+    def __str__(self):
+        return self.mobile
+
+    class Meta:
+        verbose_name_plural = "Services at rupees 99 Enquiry Management"
+
 
 class EventManagementEnquiry(models.Model):
     firstName = models.CharField(max_length=100, null=True, unique=False)

@@ -57,7 +57,7 @@ def constructionEnquiry(request):
     lastName = request.GET.get("lastName")
     email = request.GET.get("email")
     mobile = request.GET.get("mobile")
-    construction_enquiry_service = request.GET.get("construction_enquiry_service")
+    servicesAt99_enquiry_service = request.GET.get("servicesAt99_enquiry_service")
 
     if firstName:
         enquiry = ConstructionEnquiry.objects.create(
@@ -71,6 +71,24 @@ def constructionEnquiry(request):
         return render(request, 'thankyou.html', {})
     return render(request, 'constructionEnquiry.html', {})
 
+def servicesAt99Enquiry(request):
+    firstName = request.GET.get("firstName")
+    lastName = request.GET.get("lastName")
+    email = request.GET.get("email")
+    mobile = request.GET.get("mobile")
+    construction_enquiry_service = request.GET.get("servicesAt99_enquiry_service")
+
+    if firstName:
+        enquiry = ConstructionEnquiry.objects.create(
+            firstName=firstName,
+            lastName=lastName,
+            email=email,
+            mobile=mobile,
+            construction_enquiry_service=construction_enquiry_service
+        )
+
+        return render(request, 'thankyou.html', {})
+    return render(request, 'servicesAt99Enquiry.html', {})
 
 def eventManagementEnquiry(request):
     firstName = request.GET.get("firstName")
