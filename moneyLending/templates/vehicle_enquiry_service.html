@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="first-row">
+    <img class="image" src="/static/vehicleService.jpg" alt="Paris"/>
+    <div class="container">
+        <form id="contact" action="/vehicleServiceEnquiry" method="GET">
+            {% csrf_token %}
+            <h4>Vehicle_Service_Enquiry_Form</h4>
+            <fieldset>
+                <input placeholder="First name" type="text" tabindex="1" required autofocus name="firstName"/>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Last name" type="text" tabindex="2" name="lastName" required/>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" name="email" required/>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" name="mobile" required/>
+            </fieldset>
+            <fieldset>
+                <label for="Vehicle_Service_Enquiry">Choose a service:</label>
+                <select name="Service" id="Vehicle_Service_Enquiry">
+                    <option value="Finance Service">Financing</option>
+                    <option value="Rent Service">Rent Service</option>
+                    <option value="Spare Parts Requirement">Spare Parts Requirement</option>
+                    <option value="Spare Parts Finance Service">Spare Parts Finance Service</option>
+                    <option value="Repairing">Repairing</option>
+                    <option value="Washing">Washing</option>
+                    <option value="Cleaning">Cleaning</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">
+                    Submit
+                </button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="tag-line-section">
+        <h1 class="headline">GROW YOUR BUSINESS WITH PAYGASUS INDIA</h1>
+    </div>
+</div>
+
+{% endblock content %}
+

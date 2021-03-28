@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="first-row" xmlns="http://www.w3.org/1999/html">
-        <img class="image" src="/static/homeDesign.jpg" alt="Paris"/>
+    <div class="first-row">
+        <img class="image" src="/static/constructionImage.jpg" alt="Paris"/>
         <div class="container">
-            <form id="contact" action="/homeDesignEnquiry" method="GET">
+            <form id="contact" action="/constructionEnquiry" method="GET">
                 {% csrf_token %}
-                <h4>Home Design Enquiry Form</h4>
+                <h4>Construction_Enquiry_Form</h4>
                 <fieldset>
                     <input placeholder="First name" type="text" tabindex="1" required autofocus name="firstName"/>
                 </fieldset>
@@ -19,15 +19,18 @@
                     <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" name="mobile" required/>
                 </fieldset>
                 <fieldset>
-                    <label for="Home_Enquiry_Service">Choose a service:</label>
-                      <select name="Service" id="Home_Enquiry_Service">
-                        <option value="Interior">Interior</option>
-                        <option value="Exterior">Exterior</option>
-                        <option value="Naksha">Naksha</option>
+                    <label for="Construction_Enquiry_Service">Choose a service:</label>
+                      <select name="Service" id="Construction_Enquiry_Service">
+                        <option value="Base">Base</option>
+                        <option value="Plaster">Plaster</option>
+                        <option value="Roof">Roof</option>
+                        <option value="Diversion">Diversion</option>
                       </select>
-                    <!-- Interior
-                        Exterior
-                        Naksha
+                    <!-- Base
+                        Wall
+                        Plaster
+                        Roof
+                        Diversion
                         -->
                 </fieldset>
                 <fieldset>
@@ -37,9 +40,9 @@
                 </fieldset>
             </form>
         </div>
-    <div class="tag-line-section">
-        <h1 class="headline">GROW YOUR BUSINESS WITH PAYGASUS INDIA</h1>
-    </div>
+        <div class="tag-line-section">
+            <h1 class="headline">GROW YOUR BUSINESS WITH PAYGASUS INDIA</h1>
+        </div>
     </div>
 
 {% endblock content %}
