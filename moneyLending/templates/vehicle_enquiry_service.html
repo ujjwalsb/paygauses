@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="first-row">
-    <img class="image" src="/static/99Services.jpg" alt="Paris"/>
+    <img class="image" src="/static/vehicleService.jpg" alt="Paris"/>
     <div class="container">
-        <form id="contact" action="/servicesAt99Enquiry" method="GET">
+        <form id="contact" action="/vehicleServiceEnquiry" method="GET">
             {% csrf_token %}
-            <h4>Services@99_Enquiry_Form</h4>
+            <h4>Vehicle_Service_Enquiry_Form</h4>
             <fieldset>
                 <input placeholder="First name" type="text" tabindex="1" required autofocus name="firstName"/>
             </fieldset>
@@ -19,25 +19,16 @@
                 <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" name="mobile" required/>
             </fieldset>
             <fieldset>
-                <label for="Service_@99_Enquiry">Choose a service:</label>
-                <select name="Service" id="Service_@99_Enquiry">
-                    <option value="Cloth Washing">Cloth Washing</option>
-                    <option value="Electric Repair">Electric Repair</option>
-                    <option value="Plumbing">Plumbing</option>
-                    <option value="Delivery">Delivery</option>
-                    <option value="Laundary">Laundary</option>
-                    <option value="Maintenance">Maintenance</option>
+                <label for="Vehicle_Service_Enquiry">Choose a service:</label>
+                <select name="Service" id="Vehicle_Service_Enquiry">
+                    <option value="Finance Service">Financing</option>
+                    <option value="Rent Service">Rent Service</option>
+                    <option value="Spare Parts Requirement">Spare Parts Requirement</option>
+                    <option value="Spare Parts Finance Service">Spare Parts Finance Service</option>
+                    <option value="Repairing">Repairing</option>
+                    <option value="Washing">Washing</option>
                     <option value="Cleaning">Cleaning</option>
                 </select>
-                <!-- Cloth Washing
-
-                Electric Repair
-                Plumbing
-                Delivery
-                Laundary
-                Maintenance
-                Cleaning
-                    -->
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">

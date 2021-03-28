@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="first-row">
+    <img alt="Paris" class="image" src="/static/rentingService.jpeg"/>
+    <div class="container">
+        <form action="/rentalServiceEnquiry" id="contact" method="GET">
+            {% csrf_token %}
+            <h4>Rental_Service_Enquiry_Form</h4>
+            <fieldset>
+                <input autofocus name="firstName" placeholder="First name" required tabindex="1" type="text"/>
+            </fieldset>
+            <fieldset>
+                <input name="lastName" placeholder="Last name" required tabindex="2" type="text"/>
+            </fieldset>
+            <fieldset>
+                <input name="email" placeholder="Your Email Address" required tabindex="2" type="email"/>
+            </fieldset>
+            <fieldset>
+                <input name="mobile" placeholder="Your Phone Number (optional)" required tabindex="3" type="tel"/>
+            </fieldset>
+            <fieldset>
+                <!--
+                RETAIL  SPACE
+                FURNISED ROOM
+                RENT ROOM`S
+                DOUBLE  HEIGHT SHOWROOM
+                BAY SHOPE BAY PLOT BAY HOUSES BAY & RENT COMPLEX
+                OFFICE  SPACES
+                MULTIPLE FOOD COURT & CAFE SPACE
+                -->
+                <label for="Rental_Service_Enquiry">Choose a service:</label>
+                <select id="Rental_Service_Enquiry" name="Service">
+                    <option value="RETAIL  SPACE">RETAIL SPACE</option>
+                    <option value="FURNISED ROOM">FURNISED ROOM</option>
+                    <option value="DOUBLE  HEIGHT SHOWROOM ">DOUBLE HEIGHT SHOWROOM</option>
+                    <option value="BAY SHOPE BAY PLOT BAY HOUSES BAY & RENT COMPLEX">BAY SHOPE BAY PLOT BAY HOUSES BAY &
+                        RENT COMPLEX
+                    </option>
+                    <option value="OFFICE  SPACES">OFFICE SPACES</option>
+                    <option value="MULTIPLE FOOD COURT & CAFE SPACE">MULTIPLE FOOD COURT & CAFE SPACE</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <button data-submit="...Sending" id="contact-submit" name="submit" type="submit">
+                    Submit
+                </button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="tag-line-section">
+        <h1 class="headline">WE GIVES YOU A BEST RENT AGREEMENT</h1>
+        <div class="sub-line">WE TAKE YOUR PROPERTY IN BEST AGREEMENT IN 11 MONTH`S
+            WE ARE PROVIDING THE BEST DEALS RENTAL SERVICE
+            WE ARE ALSO MARKETING YOUR PROPERTY
+            WE GIVE`S THE BEST AS WE DO BEST -WE SHALL YOUR PROPERTY AT BEST PRICE
+            WE ARE ALSO PROVIDE THE PARTNER FOR THE BEST DEALS
+            YOU CAN ALSO (BAY & RENT ) THE PROPERTY WITH THE PARTNER WITH SARE LIKE =( HALF & HALF ) OR (PERCENTAGE %)
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}
+

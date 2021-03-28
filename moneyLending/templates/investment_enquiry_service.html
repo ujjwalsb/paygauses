@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="first-row">
+    <img alt="Paris" class="image" src="/static/investmentService.png"/>
+    <div class="container">
+        <form action="/investmentServiceEnquiry" id="contact" method="GET">
+            {% csrf_token %}
+            <h4>Investment_Service_Enquiry_Form</h4>
+            <fieldset>
+                <input autofocus name="firstName" placeholder="First name" required tabindex="1" type="text"/>
+            </fieldset>
+            <fieldset>
+                <input name="lastName" placeholder="Last name" required tabindex="2" type="text"/>
+            </fieldset>
+            <fieldset>
+                <input name="email" placeholder="Your Email Address" required tabindex="2" type="email"/>
+            </fieldset>
+            <fieldset>
+                <input name="mobile" placeholder="Your Phone Number (optional)" required tabindex="3" type="tel"/>
+            </fieldset>
+            <fieldset>
+                <!--
+                NOMINAL INITIAL INVESTMENT
+                REVENUE  SHARING
+                REGULAR TRAINING FROM INDUSTRY EXPERTS
+                MULTIPLE PRODUCTS  IN  ONE ROOF
+                SOLID  RESURCH AND FREE RESURCH CALL
+                MULTIPALE  TRADING  PLATFORM
+                TECHNOLOGY, MARKETING AND BRANDING SUPPORT
+                TIMELY  MONTHLY  PAYOUT
+                10+2 YEAR  OF TRUST
+                -->
+                <label for="Rental_Service_Enquiry">Choose a service:</label>
+                <select id="Rental_Service_Enquiry" name="Service">
+                    <option value="NOMINAL INITIAL INVESTMENT ">NOMINAL INITIAL INVESTMENT </option>
+                    <option value="REVENUE  SHARING">REVENUE  SHARING</option>
+                    <option value="REGULAR TRAINING FROM INDUSTRY EXPERTS">REGULAR TRAINING FROM INDUSTRY EXPERTS</option>
+                    <option value="MULTIPLE PRODUCTS  IN  ONE ROOF">MULTIPLE PRODUCTS  IN  ONE ROOF</option>
+                    <option value="TECHNOLOGY, MARKETING AND BRANDING SUPPORT">TECHNOLOGY, MARKETING AND BRANDING SUPPORT </option>
+                    <option value="TIMELY  MONTHLY  PAYOUT">TIMELY  MONTHLY  PAYOUT</option>
+                    <option value="10+2 YEAR  OF TRUST ">10+2 YEAR  OF TRUST</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <button data-submit="...Sending" id="contact-submit" name="submit" type="submit">
+                    Submit
+                </button>
+            </fieldset>
+        </form>
+    </div>
+    <div class="tag-line-section">
+        <h1 class="headline">GROW YOUR BUSINESS WITH PAYGASUS INDIA</h1>
+    </div>
+</div>
+
+{% endblock content %}
+
