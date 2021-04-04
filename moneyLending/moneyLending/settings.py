@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'czd4i%%4=gz(42flwxxk$$%&de&zw+=ql!m%eckz$u@drtq758'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,15 +77,17 @@ WSGI_APPLICATION = 'moneyLending.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'local_Paygauses_dev',
-        'USER': 'localuser',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
+        # 'NAME': 'local_Paygauses_dev',
+        # # 'USER': 'localuser',
+        # # 'PASSWORD': '1234',
+        # 'USER': 'root',
+        # 'PASSWORD': 'password',
+        # 'HOST': 'localhost',
 
-        # 'NAME': 'payg040$paygasusmoney',
-        # 'USER': 'payg040',
-        # 'PASSWORD': 'paygasus789',
-        # 'HOST': 'payg040.mysql.pythonanywhere-services.com',
+        'NAME': 'payg040$paygasusmoney',
+        'USER': 'payg040',
+        'PASSWORD': 'paygasus789',
+        'HOST': 'payg040.mysql.pythonanywhere-services.com',
     }
 }
 
