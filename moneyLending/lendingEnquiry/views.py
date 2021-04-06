@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.decorators.http import require_GET, require_POST
 from .models import HomeDesignEnquiry
 from .models import LoanEnquiry
-from .models import ConstructionEnquiry, VehicleServiceEnquiry, RentalServiceEnquiry, ServicesAt99Enquiry
+from .models import ConstructionEnquiry, VehicleServiceEnquiry, RentalServiceEnquiry, ServicesAt99Enquiry, InvestmentServiceEnquiry
 
 
 def loanEnquiry(request):
