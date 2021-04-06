@@ -164,7 +164,7 @@ def investmentServiceEnquiry(request):
     investment_enquiry_service = request.GET.get("investment_enquiry_service")
 
     if firstName:
-        enquiry = RentalServiceEnquiry.objects.create(
+        enquiry = InvestmentServiceEnquiry.objects.create(
             firstName=firstName,
             lastName=lastName,
             email=email,
